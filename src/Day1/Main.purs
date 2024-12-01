@@ -37,15 +37,10 @@ runB =
 loadLists :: Effect DualList
 loadLists = 
     readTextFile UTF8 "./src/Day1/input.txt"
-        <#> parseLists
-
-parseLists :: String -> DualList
-parseLists input = 
-    input 
-        # lines 
-        # A.filter (not S.null)
-        # map (words >>> filterMap I.fromString)
-        # A.foldr buildLists (T.Tuple [] []) -- Fold into Tuple of sorted lists
+        <#> lines 
+        <#> A.filter (not S.null)
+        <#> map (words >>> filterMap I.fromString)
+        <#> A.foldr buildLists (T.Tuple [] []) -- Fold into Tuple of sorted lists
 
 buildLists :: (Array Int) -> DualList -> DualList
 buildLists row (T.Tuple xs ys) = 
