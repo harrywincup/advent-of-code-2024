@@ -14,6 +14,7 @@ to generate this file without the comments in this block.
 , dependencies =
   [ "arrays"
   , "console"
+  , "debug"
   , "effect"
   , "filterable"
   , "foldable-traversable"

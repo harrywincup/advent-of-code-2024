@@ -4,8 +4,9 @@ import Prelude
 
 import Effect (Effect)
 
-import Day1.Main as Day1
+--import Day1.Main as Day1
+import Day2.Main as Day2
 
 main :: Effect Unit
 main = 
-  Day1.runB
+  Day2.runA
