@@ -19,15 +19,14 @@ runA =
         <#> lines 
         <#> A.filter (not S.null)
         <#> map (words >>> map (I.fromString >>> fromMaybe 0))
-        <#> map isReportSafe
+        <#> map isSafe
         <#> A.filter ((==) true)
         <#> A.length
         <#> show
         >>= log
 
-
-isReportSafe :: Array Int -> Boolean 
-isReportSafe levels = 
+isSafe :: Array Int -> Boolean 
+isSafe levels = 
     levels 
         # pairs 
         # map (\(T.Tuple a b) -> (a - b))
