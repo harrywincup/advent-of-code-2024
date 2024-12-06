@@ -14,8 +14,10 @@ to generate this file without the comments in this block.
 , dependencies =
   [ "arrays"
   , "console"
+  , "control"
   , "debug"
   , "effect"
+  , "either"
   , "filterable"
   , "foldable-traversable"
   , "integers"
@@ -23,6 +25,7 @@ to generate this file without the comments in this block.
   , "node-buffer"
   , "node-fs"
   , "numbers"
+  , "parsing"
   , "prelude"
   , "strings"
   , "stringutils"
